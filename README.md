@@ -62,12 +62,11 @@ that do occur, that is, the 1 positions.
 <br></br>
 ### An example inverted index construction  
 > *Doc 1*  
-<kbd>I did enact Julius Caesar: I was killed
-i’ the Capitol; Brutus killed me.</kbd>  
+<kbd>I did enact Julius Caesar: I was killed i’ the Capitol; Brutus killed me.</kbd>  
 *Doc 2*  
-<kbd>
-So let it be with Caesar. The noble Brutus
-hath told you Caesar was ambitious:</kbd>
+<kbd>So let it be with Caesar. The noble Brutus hath told you Caesar was ambitious:</kbd>  
+
+
 - To build the index, the major steps in this are:
 
   1. Collect the documents to be indexed:  
