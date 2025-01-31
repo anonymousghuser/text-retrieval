@@ -113,24 +113,22 @@ enron.to and in.body
 1. 设定"Date"、"To"、"From"、"Subject"以及"body"的域权重分别为 0.05、0.1、0.1、0.4 和 0.35
    
 2. 对于每个域，计算以词项频率为权重的向量内积。
-   
 
-   $$
+   ```math
    d_i = \vec{V}(q) \cdot \vec{V_i}(d)
-   $$
-   
-   
+   ```
+
    再使用如下公式进行域加权计算最终的文档得分
    
-   
-   $$
-   s = \sum_{i=1}^{5} w_i d_i
-   $$
+ ```math
+    $$
+    s = \sum_{i=1}^{5} w_i d_i
+    $$
+   ```
+```math
+w_i 表示域权重， d_i  表示每个域的向量内积的值。
+   ```
 
-   
-   
-   $w_i$ 表示域权重， $d_i$  表示每个域的向量内积的值。
-   
 3. 按文档得分s 从高到低进行文档排序。
    
    使用函数 `void and_sort_query(ofstream& out, const string &file, const map<string,set<element> > *, vector<string> &, vector<string> &,vector<string> &);` 完成 AND 查询并进行文档排序。
