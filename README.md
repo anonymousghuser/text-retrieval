@@ -69,7 +69,7 @@
    ```
    使用函数 `ofstream& write_doc_map(ofstream&, const string&, vector<string> &, vector<string> &,vector<string> &);` 将以上三类信息存放在文本文件 doc_map.txt 中。
 
-   再使用函数 `ofstream& write_file(ofstream&, const string&, const map<string,set<element> > &);` 将倒排索引数据写入硬盘，数据存放在 doc_date.txt、doc_from.txt、doc_to.txt、doc_subject.txt 和 doc_body.txt 五个文本文件中。
+   再使用函数 `ofstream& write_file(ofstream&, const string&, const map<string,set<element> > &);` 将倒排索引数据写入硬盘，数据存放在 doc_date.txt、doc_from.txt、doc_to.txt、doc_subject.txt 和 doc_body.txt 五个文本文件中。(由于doc_body文件过大，仅上传前半部分150000行)
    
    以上五个文本文件的数据存储结构如下：
    
@@ -84,7 +84,7 @@
    new_postinglist = 1；重新遍历文档建立倒排索引
    new_postinglist = 0；从硬盘中读取已经建立好的倒排索引
    ```
-   由于实验数据集比较大，每次查询时重新建立倒排索引是很费时的，所以一旦倒排索引建立好之后，下次查询时可以从硬盘中读取已建立好的倒排索引数据至内存，节省时间。
+   由于数据集比较大，每次查询时重新建立倒排索引是很费时的，所以一旦倒排索引建立好之后，下次查询时可以从硬盘中读取已建立好的倒排索引数据至内存，节省时间。
 
 ## Demonstration: *boolean retrieval*  on *zone index*
 > 实现简单的布尔查询，支持 AND，OR 和 NOT。
